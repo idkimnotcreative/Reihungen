@@ -43,9 +43,7 @@ public class Balkendiagramm extends PApplet
         zeichneBalken();
     }
 
-
     public void zeichneBalken() {
-
         clear();
         background(bgColor);
 
@@ -54,18 +52,18 @@ public class Balkendiagramm extends PApplet
         textFont(grosseSchrift);
         text("Balkendiagramm", 2, 20);
         textFont(kleineSchrift);
-        
-        for(int i=0; i < zahlen.length; i++) {
-            // Balkendiagramm zeichnen
-            fill(barColor);
-            rect(120, 15*i+25, zahlen[i], 13); //2*zahlen[i]
-
-            // Beschriftung
-            fill(fgColor);
-            textFont(kleineSchrift);  
-            text("i="+i, 2, 38+i*15);
-            text("zahlen["+i+"]="+zahlen[i], 30, 38+i*15);
+        // ----------------------------------------------------------------------
+        // To Do
+        // ----------------------------------------------------------------------
+        for(int i=0; i<zahlen.length;i++)
+        {
+            rect(120, 25+i*15, zahlen[i], 10);
+            text("i="+i+" zahlen ["+i+"]="+zahlen[i], 0, 34+i*15);
         }
+        
+            
+
+        // Tipp: Vergleiche mit deiner Implementation von der Kaffeehaus-Täuschung.
     }
 
     /**
